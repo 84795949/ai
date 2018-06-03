@@ -23,7 +23,7 @@ with tf.Session() as sess:
     sess.run(tg.global_variables_initializer())
     for _ in range(1000):
         batch_xs, batch_ys = data.train.next_batch(100)
-        sess.run(train_step, feed_dict={x:batch_xs, y:batch_ys})
+        sess.run(train_step, feed_dict={x: batch_xs, y_: batch_ys})
 
     print(sess.run(accuracy, feed_dict={x:data.test.images, y_:data.test.lables}))
 
