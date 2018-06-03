@@ -4,6 +4,6 @@ import tensorflow as tf
 def regression(x):
     W = tf.Variable(tf.zeros([784, 10]), name="W")
     b = tf.Variable(tf.zeros([10]), name="b")
-    y = tf.nn.softmax(tf.matmul((x, W)) + b)
+    y = tf.nn.softmax(tf.matmul(x, W) + b)
 
     return y, [W, b]
