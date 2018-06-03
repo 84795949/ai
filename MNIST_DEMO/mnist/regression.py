@@ -28,7 +28,6 @@ with tf.Session() as sess:
     print(sess.run(accuracy, feed_dict={x:data.test.images, y_:data.test.lables}))
 
     path = saver.save(
-     
         sess.os.path.join(os.path.dirname(__file__), 'data', 'regression.ckpt')
         write_meta_graph = False, write_state = False)
     print("Saved:", path)
