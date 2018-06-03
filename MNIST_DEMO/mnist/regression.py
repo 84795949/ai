@@ -30,5 +30,5 @@ with tf.Session() as sess:
     path = saver.save(
      
         sess.os.path.join(os.path.dirname(__file__), 'data', 'regression.ckpt')
-        write_meta_graph=False,write_state=False)
+        write_meta_graph = False, write_state = False)
     print("Saved:", path)
